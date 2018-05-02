@@ -1,6 +1,5 @@
 
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="en"><head>
     <title>{{currency_id}} Details</title>
      <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
@@ -45,67 +44,6 @@
               <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
-=======
-<html lang="en">
- 
-<head>
-    <title>{{currency.name}} Details</title>
-     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!--<script>-->
-<!--$(document).ready(function(){-->
-    <!--$("button").click(function(){-->
-        <!--$("div").toggle();-->
-    <!--});-->
-<!--});-->
-<!--</script>-->
-     
-</head>
- 
-<body>
-    <div class="container">
-        <div id = "toggle">
-            <h1>{{currency.name}} Details</h1>
-
-            <table>
-                <tr>
-                    <th>History minute</th>
-                    <th>History hour</th>
-                    <th>History Daily</th>
-                </tr>
-                <tr>
-                    <td>
-            
-            <ul>
-                <li>Open: {{currency.cr_open}}</li>
-                <li>Close: {{currency.cr_close}}</li>
-                <li>High: {{currency.cr_high}}</li>
-                <li>Low: {{currency.cr_low}}</li>
-            </ul>
-                    </td>
-                    <td>
-
-            <ul>
-                <li>Open: {{currency1.cr_open}}</li>
-                <li>Close: {{currency1.cr_close}}</li>
-                <li>High: {{currency1.cr_high}}</li>
-                <li>Low: {{currency1.cr_low}}</li>
-            </ul>
-                    </td>
-                    <td>
-
-            <ul>
-                <li>Open: {{currency2.cr_open}}</li>
-                <li>Close: {{currency2.cr_close}}</li>
-                <li>High: {{currency2.cr_high}}</li>
-                <li>Low: {{currency2.cr_low}}</li>
-            </ul>
-                    </td>
-                </tr>
-
-
-                </table>
->>>>>>> ca06d90ebee91aa6930fd41de6349d112b31924a
         </div>
       </div>
     </nav>
@@ -115,7 +53,6 @@
 	<div class="container">
 		
 
-<<<<<<< HEAD
       <div class="row">
 		  
         <!-- Post Content Column -->
@@ -140,18 +77,6 @@
                     <td id="cr_close">$00.00</td>
                 </tr>
         </table>
-=======
-        
-        <div>
-        <form>
-        <button id="btn_graph" type="button">Graph</button>
-        <button id="btn_history" type="button" onclick="myFunction()">History</button>
-        <button id="btn_news" type="submit" value="{{currency.asset_id}}">News</button>
-        <button id="btn_market" type="button" value="{{currency.asset_id}}" >market</button>
-        <button id="btn_prediction" type="button" value="{{currency.asset_id}}">Prediction</button>
-        <button id="btn_calculate" type="button">Calculate</button>
-        </form>
->>>>>>> ca06d90ebee91aa6930fd41de6349d112b31924a
         </div>
 			<div class="card">
         <ul class="nav nav-tabs" role="tablist">
@@ -303,7 +228,6 @@
       <!-- /.row -->
 
     </div>
-<<<<<<< HEAD
     <!-- /.container -->
 	
 	
@@ -326,16 +250,6 @@
     <script src="static/vendor/jquery/jquery.min.js"></script>
     <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script>
-=======
-
-    <!--<script>-->
-<!--function myFunction() {-->
-   <!--var element = document.getElementById("toggle");-->
-   <!--element.toggle();-->
-<!--}-->
-<!--</script>-->
-    <script>
->>>>>>> ca06d90ebee91aa6930fd41de6349d112b31924a
 function myFunction() {
     var x = document.getElementById("toggle");
     if (x.style.display === "none") {
@@ -345,11 +259,7 @@ function myFunction() {
     }
 }
 </script>
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> ca06d90ebee91aa6930fd41de6349d112b31924a
     <script type=text/javascript>
   $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
 </script>
@@ -480,7 +390,6 @@ function myFunction() {
       $.getJSON($SCRIPT_ROOT + '/prediction', {
         asset_id: $('#input_asset_id').val()
       }, function(data) {
-          if( data[0].status =="success"){
             console.log(data)
           var today = new Date()
           var tomorrow = new Date();
@@ -488,12 +397,8 @@ function myFunction() {
           tomorrow_date = tomorrow.getMonth()+"/"+tomorrow.getDate()+"/"+tomorrow.getFullYear()
           document.getElementById('next_day').innerHTML = tomorrow_date
           document.getElementById('prediction_value').innerHTML = "Prediction: $"+data[1].prediction
-          }else{
-              clearInterval(interval)
-          }
       });
       return false;
-    
 
   }
 
